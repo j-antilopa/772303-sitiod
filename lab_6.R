@@ -40,4 +40,3 @@ solution <- solve(A1, b1)
 b2 <- A1 %*% solution
 
 b2
-
