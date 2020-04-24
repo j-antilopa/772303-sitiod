@@ -1,0 +1,25 @@
+version: '2'
+services:
+  mongo:
+   image: mongo:latest
+   container_name: mongo
+   command: [--auth]
+   env_file: .env
+   environment:
+     MONGO_INITDB_ROOT_USERNAME: ${mongo_username}
+     MONGO_INITDB_ROOT_PASSWORD: ${mongo_password}
+     MONGO_INITDB_DATABASE: ${mongo_init_db}
+   ports:
+    - "27017:27017"
+
+  notebook:
+    container_name: notebook
+    build: .
+    env_file: .env
+    command: bash -c "jupyter notebook --ip 0.0.0.0 --no-browser --allow-root && echo jupyter-notebook list"
+    ports:
+     - "8888:8888"
+    volumes:
+    - "./lab:/src/lab"
+    depends_on:
+      - mongo
