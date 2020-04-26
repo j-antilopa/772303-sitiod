@@ -1,0 +1,88 @@
+
+R version 3.6.2 (2019-12-12) -- "Dark and Stormy Night"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R -- это свободное ѕќ, и оно поставл€етс€ безо вс€ких гарантий.
+¬ы вольны распростран€ть его при соблюдении некоторых условий.
+¬ведите 'license()' дл€ получени€ более подробной информации.
+
+R -- это проект, в котором сотрудничает множество разработчиков.
+¬ведите 'contributors()' дл€ получени€ дополнительной информации и
+'citation()' дл€ ознакомлени€ с правилами упоминани€ R и его пакетов
+в публикаци€х.
+
+¬ведите 'demo()' дл€ запуска демонстрационных программ, 'help()' -- дл€
+получени€ справки, 'help.start()' -- дл€ доступа к справке через браузер.
+¬ведите 'q()', чтобы выйти из R.
+
+> year<- c(2000,2001,2002,2003,2004)
+> rate<- c(9.34,8.50,7.62,6.93,6.60)
+> plot(year,rate,main="Commercial Banks Interest Rate for 5 Year Car Loan",sub="http://www.federalreserve.gov/releases/g19/20050805/")
+> 
+> plot(year,rate,main="Commercial Banks Interest Rate for 5 Year Car Loan",sub="http://www.federalreserve.gov/releases/g19/20050805/")
+
+> year<- c(2000,2001,2002,2003,2004)
+> rate<- c(9.34,8.50,7.62,6.93,6.60)
+> plot(year,rate,main="Commercial Banks Interest Rate for 5 Year Car Loan",sub="http://www.federalreserve.gov/releases/g19/20050805/")
+> cor(year, rate)
+[1] -0.9880813
+> fit<- lm(rate~year)
+> fit
+
+Call:
+lm(formula = rate ~ year)
+
+Coefficients:
+(Intercept)         year  
+   1419.208       -0.705  
+
+> attributes(fit)
+$names
+ [1] "coefficients"  "residuals"     "effects"       "rank"          "fitted.values" "assign"        "qr"            "df.residual"  
+ [9] "xlevels"       "call"          "terms"         "model"        
+
+$class
+[1] "lm"
+
+> fit$coefficients[1]
+(Intercept) 
+   1419.208 
+> fit$coefficients[[1]]
+[1] 1419.208
+> fit$coefficients[2]
+  year 
+-0.705 
+> fit$coefficients[[2]]
+[1] -0.705
+> fit$coefficients[[2]]*2020+fit$coefficients[[1]]
+[1] -4.892
+> residuals(fit)
+     1      2      3      4      5 
+ 0.132 -0.003 -0.178 -0.163  0.212 
+> fit$residuals
+     1      2      3      4      5 
+ 0.132 -0.003 -0.178 -0.163  0.212 
+> plot(year,fit$residuals)
+
+> summary(fit)
+
+Call:
+lm(formula = rate ~ year)
+
+Residuals:
+     1      2      3      4      5 
+ 0.132 -0.003 -0.178 -0.163  0.212 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)   
+(Intercept) 1419.20800  126.94957   11.18  0.00153 **
+year          -0.70500    0.06341  -11.12  0.00156 **
+---
+Signif. codes:  0 С***Т 0.001 С**Т 0.01 С*Т 0.05 С.Т 0.1 С Т 1
+
+Residual standard error: 0.2005 on 3 degrees of freedom
+Multiple R-squared:  0.9763,    Adjusted R-squared:  0.9684 
+F-statistic: 123.6 on 1 and 3 DF,  p-value: 0.001559
+
+> 
