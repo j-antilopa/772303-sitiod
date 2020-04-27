@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "7d5a2e8c-3771-42ba-9fa5-9ddd90c7a43a",
+		"name": "lab8",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add logs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/logs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"logs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add logs Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/logs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"logs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/logs/getUrlByIp?ip=63.78.228.227",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"logs",
+						"getUrlByIp"
+					],
+					"query": [
+						{
+							"key": "ip",
+							"value": "63.78.228.227"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/logs/getUrlByIp?ip=63.78.228.227",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"logs",
+						"getUrlByIp"
+					],
+					"query": [
+						{
+							"key": "ip",
+							"value": "63.78.228.227"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"{\"_id\": \"http://attack.example.com/belief.php\", \"value\": 1.0}\"\r\n\"{\"_id\": \"https://www.example.com/?afternoon=bat&bomb=bells\", \"value\": 1.0}\"\r\n\"{\"_id\": \"https://example.com/activity/attack\", \"value\": 1.0}\"\r\n\"{\"_id\": \"https://bead.example.com/\", \"value\": 1.0}\"\r\n\"{\"_id\": \"https://www.example.com/?approval=art\", \"value\": 1.0}\"\r\n\"{\"_id\": \"http://example.org/appliance/book#basketball\", \"value\": 3.0}\"\r\n\"{\"_id\": \"https://example.com/amusement/bed.aspx?bells=bite&basin=birthday\", \"value\": 1.0}\"\r\n\"{\"_id\": \"https://addition.example.com/\", \"value\": 1.0}\"\r\n\"{\"_id\": \"http://www.example.com/\", \"value\": 2.0}\"\r\n\"{\"_id\": \"http://example.com/\", \"value\": 1.0}\"\r\n\"{\"_id\": \"http://blood.example.net/\", \"value\": 1.0}\"\r\n\"{\"_id\": \"http://www.example.com/adjustment/behavior.htm\", \"value\": 1.0}\"\r\n\"{\"_id\": \"http://www.example.com/box/advertisement.php#basketball\", \"value\": 1.0}\"\r\n\"{\"_id\": \"https://book.example.com/beef\", \"value\": 1.0}\"\r\n\"{\"_id\": \"http://bit.example.com/badge/advice.htm\", \"value\": 1.0}\"\r\n\"{\"_id\": \"https://www.example.com/\", \"value\": 1.0}\"\r\n\"{\"_id\": \"https://example.com/?beginner=boat&bridge=achiever\", \"value\": 1.0}\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/logs/getSumCount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"logs",
+						"getSumCount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 7",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/logs/getUrlByIp?ip=63.78.228.227",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"logs",
+						"getUrlByIp"
+					],
+					"query": [
+						{
+							"key": "ip",
+							"value": "63.78.228.227"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 8",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/logs/getUrlByIp?ip=63.78.228.227",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"logs",
+						"getUrlByIp"
+					],
+					"query": [
+						{
+							"key": "ip",
+							"value": "63.78.228.227"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
