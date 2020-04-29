@@ -1,0 +1,2066 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20201.20.0326.1623                               -->
+<workbook source-build='2020.1.2 (20201.20.0326.1623)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Orders+ (Multiple Connections)' inline='true' name='federated.0q0b5pj0uetv7910cgxrg1lvlchx' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Global Superstore Orders' name='excel-direct.188p7w71ou460s18ewo021pv6re7'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='F:/Study/6sem/sitiod/Global Superstore Orders.xlsx' interpretationMode='0' password='' port='0' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='Global Superstore Returns' name='textscan.1hxn2s30ujo0m21dll3ou02u5mki'>
+            <connection class='textscan' directory='F:/Study/6sem/sitiod' filename='Global Superstore Returns.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation join='full' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[Orders].[Region]' />
+              <expression op='[Global Superstore Returns.csv].[Region]' />
+            </expression>
+          </clause>
+          <relation connection='excel-direct.188p7w71ou460s18ewo021pv6re7' name='Orders' table='[Orders$]' type='table'>
+            <columns gridOrigin='A1:X10001:no:A1:X10001:0' header='yes' outcome='6'>
+              <column datatype='integer' name='Row ID' ordinal='0' />
+              <column datatype='string' name='Order ID' ordinal='1' />
+              <column datatype='date' name='Order Date' ordinal='2' />
+              <column datatype='date' name='Ship Date' ordinal='3' />
+              <column datatype='string' name='Ship Mode' ordinal='4' />
+              <column datatype='string' name='Customer ID' ordinal='5' />
+              <column datatype='string' name='Customer Name' ordinal='6' />
+              <column datatype='string' name='Segment' ordinal='7' />
+              <column datatype='integer' name='Postal Code' ordinal='8' />
+              <column datatype='string' name='City' ordinal='9' />
+              <column datatype='string' name='State' ordinal='10' />
+              <column datatype='string' name='Country' ordinal='11' />
+              <column datatype='string' name='Region' ordinal='12' />
+              <column datatype='string' name='Market' ordinal='13' />
+              <column datatype='string' name='Product ID' ordinal='14' />
+              <column datatype='string' name='Category' ordinal='15' />
+              <column datatype='string' name='Sub-Category' ordinal='16' />
+              <column datatype='string' name='Product Name' ordinal='17' />
+              <column datatype='real' name='Sales' ordinal='18' />
+              <column datatype='integer' name='Quantity' ordinal='19' />
+              <column datatype='real' name='Discount' ordinal='20' />
+              <column datatype='real' name='Profit' ordinal='21' />
+              <column datatype='real' name='Shipping Cost' ordinal='22' />
+              <column datatype='string' name='Order Priority' ordinal='23' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1hxn2s30ujo0m21dll3ou02u5mki' name='Global Superstore Returns.csv' table='[Global Superstore Returns#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Returned ' ordinal='0' />
+              <column datatype='string' name='OrderID ' ordinal='1' />
+              <column datatype='string' name='Region' ordinal='2' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Category]' value='[Orders].[Category]' />
+          <map key='[City]' value='[Orders].[City]' />
+          <map key='[Country]' value='[Orders].[Country]' />
+          <map key='[Customer ID]' value='[Orders].[Customer ID]' />
+          <map key='[Customer Name]' value='[Orders].[Customer Name]' />
+          <map key='[Discount]' value='[Orders].[Discount]' />
+          <map key='[Market]' value='[Orders].[Market]' />
+          <map key='[Order Date]' value='[Orders].[Order Date]' />
+          <map key='[Order ID]' value='[Orders].[Order ID]' />
+          <map key='[Order Priority]' value='[Orders].[Order Priority]' />
+          <map key='[OrderID ]' value='[Global Superstore Returns.csv].[OrderID ]' />
+          <map key='[Postal Code]' value='[Orders].[Postal Code]' />
+          <map key='[Product ID]' value='[Orders].[Product ID]' />
+          <map key='[Product Name]' value='[Orders].[Product Name]' />
+          <map key='[Profit]' value='[Orders].[Profit]' />
+          <map key='[Quantity]' value='[Orders].[Quantity]' />
+          <map key='[Region (Global Superstore Returns.csv)]' value='[Global Superstore Returns.csv].[Region]' />
+          <map key='[Region]' value='[Orders].[Region]' />
+          <map key='[Returned ]' value='[Global Superstore Returns.csv].[Returned ]' />
+          <map key='[Row ID]' value='[Orders].[Row ID]' />
+          <map key='[Sales]' value='[Orders].[Sales]' />
+          <map key='[Segment]' value='[Orders].[Segment]' />
+          <map key='[Ship Date]' value='[Orders].[Ship Date]' />
+          <map key='[Ship Mode]' value='[Orders].[Ship Mode]' />
+          <map key='[Shipping Cost]' value='[Orders].[Shipping Cost]' />
+          <map key='[State]' value='[Orders].[State]' />
+          <map key='[Sub-Category]' value='[Orders].[Sub-Category]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Row ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Row ID]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Row ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Order ID]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Order ID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Order Date]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Order Date</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ship Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Ship Date]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Ship Date</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ship Mode</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Ship Mode]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Ship Mode</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Customer ID]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Customer ID</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Customer Name]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Customer Name</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Segment</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Segment]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Segment</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Postal Code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Postal Code]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Postal Code</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[City]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Region</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Region]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Region</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Market</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Market]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Market</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Product ID]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Product ID</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Category</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Category]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Category</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sub-Category</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Sub-Category]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Sub-Category</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Product Name]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Product Name</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Sales]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Sales</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quantity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Quantity]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Quantity</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Discount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Discount]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Discount</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Profit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Profit]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Profit</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Shipping Cost</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Shipping Cost]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Shipping Cost</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order Priority</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Order Priority]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Order Priority</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:X10001:no:A1:X10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Global Superstore Returns.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Returned </remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Returned ]</local-name>
+            <parent-name>[Global Superstore Returns.csv]</parent-name>
+            <remote-alias>Returned </remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OrderID </remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[OrderID ]</local-name>
+            <parent-name>[Global Superstore Returns.csv]</parent-name>
+            <remote-alias>OrderID </remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Region (Global Superstore Returns.csv)]</local-name>
+            <parent-name>[Global Superstore Returns.csv]</parent-name>
+            <remote-alias>Region</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='real' default-format='p0.00%' name='[Calculation1]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(ZN(SUM([Sales])) - LOOKUP(ZN(SUM([Sales])), -1)) / ABS(LOOKUP(ZN(SUM([Sales])), -1))'>
+          <table-calc level-address='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[yr:Order Date:ok]' ordering-field='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[Order Date]' ordering-type='Field' />
+        </calculation>
+      </column>
+      <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='string' name='[Country (group)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+        <calculation class='categorical-bin' column='[Country]' default='&quot;Other&quot;' new-bin='true'>
+          <bin default-name='true' value='&quot;Algeria, Angola, Argentina and 106 more&quot;'>
+            <value>&quot;Algeria&quot;</value>
+            <value>&quot;Angola&quot;</value>
+            <value>&quot;Argentina&quot;</value>
+            <value>&quot;Australia&quot;</value>
+            <value>&quot;Bahrain&quot;</value>
+            <value>&quot;Bangladesh&quot;</value>
+            <value>&quot;Barbados&quot;</value>
+            <value>&quot;Belize&quot;</value>
+            <value>&quot;Benin&quot;</value>
+            <value>&quot;Bolivia&quot;</value>
+            <value>&quot;Botswana&quot;</value>
+            <value>&quot;Brazil&quot;</value>
+            <value>&quot;Burkina Faso&quot;</value>
+            <value>&quot;Burundi&quot;</value>
+            <value>&quot;Cambodia&quot;</value>
+            <value>&quot;Cameroon&quot;</value>
+            <value>&quot;Central African Republic&quot;</value>
+            <value>&quot;Chad&quot;</value>
+            <value>&quot;Chile&quot;</value>
+            <value>&quot;Colombia&quot;</value>
+            <value>&quot;Costa Rica&quot;</value>
+            <value>&quot;Cote d&apos;Ivoire&quot;</value>
+            <value>&quot;Cuba&quot;</value>
+            <value>&quot;Cyprus&quot;</value>
+            <value>&quot;Democratic Republic of the Congo&quot;</value>
+            <value>&quot;Djibouti&quot;</value>
+            <value>&quot;Dominican Republic&quot;</value>
+            <value>&quot;Ecuador&quot;</value>
+            <value>&quot;Egypt&quot;</value>
+            <value>&quot;El Salvador&quot;</value>
+            <value>&quot;Equatorial Guinea&quot;</value>
+            <value>&quot;Eritrea&quot;</value>
+            <value>&quot;Ethiopia&quot;</value>
+            <value>&quot;French Guiana&quot;</value>
+            <value>&quot;Gabon&quot;</value>
+            <value>&quot;Ghana&quot;</value>
+            <value>&quot;Guadeloupe&quot;</value>
+            <value>&quot;Guatemala&quot;</value>
+            <value>&quot;Guinea&quot;</value>
+            <value>&quot;Guinea-Bissau&quot;</value>
+            <value>&quot;Guyana&quot;</value>
+            <value>&quot;Haiti&quot;</value>
+            <value>&quot;Honduras&quot;</value>
+            <value>&quot;Hong Kong&quot;</value>
+            <value>&quot;India&quot;</value>
+            <value>&quot;Indonesia&quot;</value>
+            <value>&quot;Iraq&quot;</value>
+            <value>&quot;Israel&quot;</value>
+            <value>&quot;Jamaica&quot;</value>
+            <value>&quot;Jordan&quot;</value>
+            <value>&quot;Kenya&quot;</value>
+            <value>&quot;Kuwait&quot;</value>
+            <value>&quot;Laos&quot;</value>
+            <value>&quot;Lebanon&quot;</value>
+            <value>&quot;Lesotho&quot;</value>
+            <value>&quot;Liberia&quot;</value>
+            <value>&quot;Libya&quot;</value>
+            <value>&quot;Madagascar&quot;</value>
+            <value>&quot;Malawi&quot;</value>
+            <value>&quot;Malaysia&quot;</value>
+            <value>&quot;Mali&quot;</value>
+            <value>&quot;Martinique&quot;</value>
+            <value>&quot;Mauritania&quot;</value>
+            <value>&quot;Morocco&quot;</value>
+            <value>&quot;Mozambique&quot;</value>
+            <value>&quot;Myanmar (Burma)&quot;</value>
+            <value>&quot;Namibia&quot;</value>
+            <value>&quot;Nepal&quot;</value>
+            <value>&quot;New Zealand&quot;</value>
+            <value>&quot;Nicaragua&quot;</value>
+            <value>&quot;Niger&quot;</value>
+            <value>&quot;Nigeria&quot;</value>
+            <value>&quot;Oman&quot;</value>
+            <value>&quot;Pakistan&quot;</value>
+            <value>&quot;Panama&quot;</value>
+            <value>&quot;Papua New Guinea&quot;</value>
+            <value>&quot;Paraguay&quot;</value>
+            <value>&quot;Peru&quot;</value>
+            <value>&quot;Philippines&quot;</value>
+            <value>&quot;Qatar&quot;</value>
+            <value>&quot;Republic of the Congo&quot;</value>
+            <value>&quot;Rwanda&quot;</value>
+            <value>&quot;Saudi Arabia&quot;</value>
+            <value>&quot;Senegal&quot;</value>
+            <value>&quot;Sierra Leone&quot;</value>
+            <value>&quot;Singapore&quot;</value>
+            <value>&quot;Somalia&quot;</value>
+            <value>&quot;South Africa&quot;</value>
+            <value>&quot;South Sudan&quot;</value>
+            <value>&quot;Sri Lanka&quot;</value>
+            <value>&quot;Sudan&quot;</value>
+            <value>&quot;Suriname&quot;</value>
+            <value>&quot;Swaziland&quot;</value>
+            <value>&quot;Syria&quot;</value>
+            <value>&quot;Tanzania&quot;</value>
+            <value>&quot;Thailand&quot;</value>
+            <value>&quot;The Gambia&quot;</value>
+            <value>&quot;Togo&quot;</value>
+            <value>&quot;Trinidad and Tobago&quot;</value>
+            <value>&quot;Tunisia&quot;</value>
+            <value>&quot;Uganda&quot;</value>
+            <value>&quot;United Arab Emirates&quot;</value>
+            <value>&quot;Uruguay&quot;</value>
+            <value>&quot;Venezuela&quot;</value>
+            <value>&quot;Vietnam&quot;</value>
+            <value>&quot;Western Sahara&quot;</value>
+            <value>&quot;Yemen&quot;</value>
+            <value>&quot;Zambia&quot;</value>
+            <value>&quot;Zimbabwe&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
+      <column caption='OrderID - Split 1' datatype='string' name='[OrderID  - Split 1]' role='dimension' type='nominal' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[OrderID ]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( [OrderID ], &quot;-&quot;, 1 ) )' />
+      </column>
+      <column caption='OrderID' datatype='string' name='[OrderID ]' role='dimension' type='nominal' />
+      <column aggregation='Sum' datatype='integer' default-format='*00000' name='[Postal Code]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column caption='Returned' datatype='string' name='[Returned ]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Row ID]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column datatype='string' name='[Sub-Category]' role='dimension' type='nominal' />
+      <column-instance column='[Sub-Category]' derivation='Attribute' name='[attr:Sub-Category:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Order Date]' derivation='Day' name='[dy:Order Date:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Order Date]' derivation='Month' name='[mn:Order Date:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Sub-Category]' derivation='None' name='[none:Sub-Category:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Order Date]' derivation='Quarter' name='[qr:Order Date:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Order Date]' derivation='Year' name='[yr:Order Date:ok]' pivot='key' type='ordinal' />
+      <group caption='Action (Country,State)' hidden='true' name='[Action (Country,State)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Country]' />
+          <groupfilter function='level-members' level='[State]' />
+        </groupfilter>
+      </group>
+      <layout dim-ordering='alphabetic' dim-percentage='0.642857' measure-ordering='alphabetic' measure-percentage='0.357143' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[dy:Order Date:ok]' type='palette'>
+            <map to='#499894'>
+              <bucket>8</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>28</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>20</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>4</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>24</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>12</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>9</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>29</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>5</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>25</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>18</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>21</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>16</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>6</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>26</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>13</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>14</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>17</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>19</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>10</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>30</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>7</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>27</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>2</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>22</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>15</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>11</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>31</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>23</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[qr:Order Date:ok]' type='palette'>
+            <map to='#499894'>
+              <bucket>8</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>4</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>12</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>9</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>5</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>6</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>10</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>7</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>2</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>11</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>3</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[attr:Sub-Category:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Chairs&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Phones&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Appliances&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Labels&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Envelopes&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Art&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Accessories&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Tables&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Binders&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Paper&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Storage&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Fasteners&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Bookcases&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Copiers&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Supplies&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Furnishings&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Machines&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Sub-Category:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Chairs&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Phones&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Appliances&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Labels&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Envelopes&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Art&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Accessories&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Tables&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Binders&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Paper&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Storage&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Fasteners&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Bookcases&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Copiers&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Supplies&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Furnishings&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Machines&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Category:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Technology&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Office Supplies&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Furniture&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[mn:Order Date:ok]' type='palette'>
+            <map to='#499894'>
+              <bucket>8</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>4</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>12</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>9</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>5</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>6</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>10</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>7</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>2</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>11</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>3</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[yr:Order Date:ok]' type='palette'>
+            <map to='#499894'>
+              <bucket>8</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>2012</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>4</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>2015</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>12</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>9</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>5</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>6</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>10</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>2014</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>7</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>2</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>2013</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>11</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>3</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Belarus&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <shared-views>
+    <shared-view name='federated.0q0b5pj0uetv7910cgxrg1lvlchx'>
+      <datasources>
+        <datasource caption='Orders+ (Multiple Connections)' name='federated.0q0b5pj0uetv7910cgxrg1lvlchx' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0q0b5pj0uetv7910cgxrg1lvlchx'>
+        <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+        <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[none:Category:nk]'>
+        <groupfilter function='member' level='[none:Category:nk]' member='&quot;Furniture&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='map (3)' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='(2) Измен продаж по годам с дифф'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Orders+ (Multiple Connections)' name='federated.0q0b5pj0uetv7910cgxrg1lvlchx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0q0b5pj0uetv7910cgxrg1lvlchx'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Country (group)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <calculation class='categorical-bin' column='[Country]' default='&quot;Other&quot;' new-bin='true'>
+                <bin default-name='true' value='&quot;Algeria, Angola, Argentina and 106 more&quot;'>
+                  <value>&quot;Algeria&quot;</value>
+                  <value>&quot;Angola&quot;</value>
+                  <value>&quot;Argentina&quot;</value>
+                  <value>&quot;Australia&quot;</value>
+                  <value>&quot;Bahrain&quot;</value>
+                  <value>&quot;Bangladesh&quot;</value>
+                  <value>&quot;Barbados&quot;</value>
+                  <value>&quot;Belize&quot;</value>
+                  <value>&quot;Benin&quot;</value>
+                  <value>&quot;Bolivia&quot;</value>
+                  <value>&quot;Botswana&quot;</value>
+                  <value>&quot;Brazil&quot;</value>
+                  <value>&quot;Burkina Faso&quot;</value>
+                  <value>&quot;Burundi&quot;</value>
+                  <value>&quot;Cambodia&quot;</value>
+                  <value>&quot;Cameroon&quot;</value>
+                  <value>&quot;Central African Republic&quot;</value>
+                  <value>&quot;Chad&quot;</value>
+                  <value>&quot;Chile&quot;</value>
+                  <value>&quot;Colombia&quot;</value>
+                  <value>&quot;Costa Rica&quot;</value>
+                  <value>&quot;Cote d&apos;Ivoire&quot;</value>
+                  <value>&quot;Cuba&quot;</value>
+                  <value>&quot;Cyprus&quot;</value>
+                  <value>&quot;Democratic Republic of the Congo&quot;</value>
+                  <value>&quot;Djibouti&quot;</value>
+                  <value>&quot;Dominican Republic&quot;</value>
+                  <value>&quot;Ecuador&quot;</value>
+                  <value>&quot;Egypt&quot;</value>
+                  <value>&quot;El Salvador&quot;</value>
+                  <value>&quot;Equatorial Guinea&quot;</value>
+                  <value>&quot;Eritrea&quot;</value>
+                  <value>&quot;Ethiopia&quot;</value>
+                  <value>&quot;French Guiana&quot;</value>
+                  <value>&quot;Gabon&quot;</value>
+                  <value>&quot;Ghana&quot;</value>
+                  <value>&quot;Guadeloupe&quot;</value>
+                  <value>&quot;Guatemala&quot;</value>
+                  <value>&quot;Guinea&quot;</value>
+                  <value>&quot;Guinea-Bissau&quot;</value>
+                  <value>&quot;Guyana&quot;</value>
+                  <value>&quot;Haiti&quot;</value>
+                  <value>&quot;Honduras&quot;</value>
+                  <value>&quot;Hong Kong&quot;</value>
+                  <value>&quot;India&quot;</value>
+                  <value>&quot;Indonesia&quot;</value>
+                  <value>&quot;Iraq&quot;</value>
+                  <value>&quot;Israel&quot;</value>
+                  <value>&quot;Jamaica&quot;</value>
+                  <value>&quot;Jordan&quot;</value>
+                  <value>&quot;Kenya&quot;</value>
+                  <value>&quot;Kuwait&quot;</value>
+                  <value>&quot;Laos&quot;</value>
+                  <value>&quot;Lebanon&quot;</value>
+                  <value>&quot;Lesotho&quot;</value>
+                  <value>&quot;Liberia&quot;</value>
+                  <value>&quot;Libya&quot;</value>
+                  <value>&quot;Madagascar&quot;</value>
+                  <value>&quot;Malawi&quot;</value>
+                  <value>&quot;Malaysia&quot;</value>
+                  <value>&quot;Mali&quot;</value>
+                  <value>&quot;Martinique&quot;</value>
+                  <value>&quot;Mauritania&quot;</value>
+                  <value>&quot;Morocco&quot;</value>
+                  <value>&quot;Mozambique&quot;</value>
+                  <value>&quot;Myanmar (Burma)&quot;</value>
+                  <value>&quot;Namibia&quot;</value>
+                  <value>&quot;Nepal&quot;</value>
+                  <value>&quot;New Zealand&quot;</value>
+                  <value>&quot;Nicaragua&quot;</value>
+                  <value>&quot;Niger&quot;</value>
+                  <value>&quot;Nigeria&quot;</value>
+                  <value>&quot;Oman&quot;</value>
+                  <value>&quot;Pakistan&quot;</value>
+                  <value>&quot;Panama&quot;</value>
+                  <value>&quot;Papua New Guinea&quot;</value>
+                  <value>&quot;Paraguay&quot;</value>
+                  <value>&quot;Peru&quot;</value>
+                  <value>&quot;Philippines&quot;</value>
+                  <value>&quot;Qatar&quot;</value>
+                  <value>&quot;Republic of the Congo&quot;</value>
+                  <value>&quot;Rwanda&quot;</value>
+                  <value>&quot;Saudi Arabia&quot;</value>
+                  <value>&quot;Senegal&quot;</value>
+                  <value>&quot;Sierra Leone&quot;</value>
+                  <value>&quot;Singapore&quot;</value>
+                  <value>&quot;Somalia&quot;</value>
+                  <value>&quot;South Africa&quot;</value>
+                  <value>&quot;South Sudan&quot;</value>
+                  <value>&quot;Sri Lanka&quot;</value>
+                  <value>&quot;Sudan&quot;</value>
+                  <value>&quot;Suriname&quot;</value>
+                  <value>&quot;Swaziland&quot;</value>
+                  <value>&quot;Syria&quot;</value>
+                  <value>&quot;Tanzania&quot;</value>
+                  <value>&quot;Thailand&quot;</value>
+                  <value>&quot;The Gambia&quot;</value>
+                  <value>&quot;Togo&quot;</value>
+                  <value>&quot;Trinidad and Tobago&quot;</value>
+                  <value>&quot;Tunisia&quot;</value>
+                  <value>&quot;Uganda&quot;</value>
+                  <value>&quot;United Arab Emirates&quot;</value>
+                  <value>&quot;Uruguay&quot;</value>
+                  <value>&quot;Venezuela&quot;</value>
+                  <value>&quot;Vietnam&quot;</value>
+                  <value>&quot;Western Sahara&quot;</value>
+                  <value>&quot;Yemen&quot;</value>
+                  <value>&quot;Zambia&quot;</value>
+                  <value>&quot;Zimbabwe&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Sales]' role='measure' type='quantitative' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Order Date]' derivation='Month' name='[mn:Order Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Sales]' derivation='Sum' name='[pcdf:sum:Sales:qk]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Relative' level-address='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[mn:Order Date:ok]' ordering-field='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[Order Date]' ordering-type='Field' type='PctDiff'>
+                <address>
+                  <value>-1</value>
+                </address>
+              </table-calc>
+            </column-instance>
+            <column-instance column='[Sales]' derivation='Sum' name='[sum:Sales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Order Date]' derivation='Year' name='[yr:Order Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[Action (Country,State)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[Country]' member='&quot;Brazil&quot;' />
+              <groupfilter function='member' level='[State]' member='&quot;São Paulo&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[Country (group)]'>
+            <groupfilter function='member' level='[Country (group)]' member='&quot;Algeria, Angola, Argentina and 106 more&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[Country (group)]</column>
+            <column>[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[none:Category:nk]</column>
+            <column>[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[Action (Country,State)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[yr:Order Date:ok]' />
+              <lod column='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[pcdf:sum:Sales:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.0q0b5pj0uetv7910cgxrg1lvlchx].[none:Category:nk] * [federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Sales:qk])</rows>
+        <cols>([federated.0q0b5pj0uetv7910cgxrg1lvlchx].[Country (group)] / [federated.0q0b5pj0uetv7910cgxrg1lvlchx].[mn:Order Date:ok])</cols>
+      </table>
+      <simple-id uuid='{85ECBF38-C425-43CD-9F3A-0C46A7A63119}' />
+    </worksheet>
+    <worksheet name='map'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Orders+ (Multiple Connections)' name='federated.0q0b5pj0uetv7910cgxrg1lvlchx' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0q0b5pj0uetv7910cgxrg1lvlchx'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='real' name='[Profit]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Sales]' role='measure' type='quantitative' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Profit]' derivation='Sum' name='[sum:Profit:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Sales]' derivation='Sum' name='[sum:Sales:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[none:Category:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Profit:qk]' palette='green_gold_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Profit:qk]' />
+              <size column='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Sales:qk]' />
+              <lod column='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[none:Country:nk]' />
+              <lod column='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[none:State:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[Latitude (generated)]</rows>
+        <cols>[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{BDE20B49-1246-44A2-A2E8-7DA2E3AB55BD}' />
+    </worksheet>
+    <worksheet name='map (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Orders+ (Multiple Connections)' name='federated.0q0b5pj0uetv7910cgxrg1lvlchx' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0q0b5pj0uetv7910cgxrg1lvlchx'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Country (group)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <calculation class='categorical-bin' column='[Country]' default='&quot;Other&quot;' new-bin='true'>
+                <bin default-name='true' value='&quot;Algeria, Angola, Argentina and 106 more&quot;'>
+                  <value>&quot;Algeria&quot;</value>
+                  <value>&quot;Angola&quot;</value>
+                  <value>&quot;Argentina&quot;</value>
+                  <value>&quot;Australia&quot;</value>
+                  <value>&quot;Bahrain&quot;</value>
+                  <value>&quot;Bangladesh&quot;</value>
+                  <value>&quot;Barbados&quot;</value>
+                  <value>&quot;Belize&quot;</value>
+                  <value>&quot;Benin&quot;</value>
+                  <value>&quot;Bolivia&quot;</value>
+                  <value>&quot;Botswana&quot;</value>
+                  <value>&quot;Brazil&quot;</value>
+                  <value>&quot;Burkina Faso&quot;</value>
+                  <value>&quot;Burundi&quot;</value>
+                  <value>&quot;Cambodia&quot;</value>
+                  <value>&quot;Cameroon&quot;</value>
+                  <value>&quot;Central African Republic&quot;</value>
+                  <value>&quot;Chad&quot;</value>
+                  <value>&quot;Chile&quot;</value>
+                  <value>&quot;Colombia&quot;</value>
+                  <value>&quot;Costa Rica&quot;</value>
+                  <value>&quot;Cote d&apos;Ivoire&quot;</value>
+                  <value>&quot;Cuba&quot;</value>
+                  <value>&quot;Cyprus&quot;</value>
+                  <value>&quot;Democratic Republic of the Congo&quot;</value>
+                  <value>&quot;Djibouti&quot;</value>
+                  <value>&quot;Dominican Republic&quot;</value>
+                  <value>&quot;Ecuador&quot;</value>
+                  <value>&quot;Egypt&quot;</value>
+                  <value>&quot;El Salvador&quot;</value>
+                  <value>&quot;Equatorial Guinea&quot;</value>
+                  <value>&quot;Eritrea&quot;</value>
+                  <value>&quot;Ethiopia&quot;</value>
+                  <value>&quot;French Guiana&quot;</value>
+                  <value>&quot;Gabon&quot;</value>
+                  <value>&quot;Ghana&quot;</value>
+                  <value>&quot;Guadeloupe&quot;</value>
+                  <value>&quot;Guatemala&quot;</value>
+                  <value>&quot;Guinea&quot;</value>
+                  <value>&quot;Guinea-Bissau&quot;</value>
+                  <value>&quot;Guyana&quot;</value>
+                  <value>&quot;Haiti&quot;</value>
+                  <value>&quot;Honduras&quot;</value>
+                  <value>&quot;Hong Kong&quot;</value>
+                  <value>&quot;India&quot;</value>
+                  <value>&quot;Indonesia&quot;</value>
+                  <value>&quot;Iraq&quot;</value>
+                  <value>&quot;Israel&quot;</value>
+                  <value>&quot;Jamaica&quot;</value>
+                  <value>&quot;Jordan&quot;</value>
+                  <value>&quot;Kenya&quot;</value>
+                  <value>&quot;Kuwait&quot;</value>
+                  <value>&quot;Laos&quot;</value>
+                  <value>&quot;Lebanon&quot;</value>
+                  <value>&quot;Lesotho&quot;</value>
+                  <value>&quot;Liberia&quot;</value>
+                  <value>&quot;Libya&quot;</value>
+                  <value>&quot;Madagascar&quot;</value>
+                  <value>&quot;Malawi&quot;</value>
+                  <value>&quot;Malaysia&quot;</value>
+                  <value>&quot;Mali&quot;</value>
+                  <value>&quot;Martinique&quot;</value>
+                  <value>&quot;Mauritania&quot;</value>
+                  <value>&quot;Morocco&quot;</value>
+                  <value>&quot;Mozambique&quot;</value>
+                  <value>&quot;Myanmar (Burma)&quot;</value>
+                  <value>&quot;Namibia&quot;</value>
+                  <value>&quot;Nepal&quot;</value>
+                  <value>&quot;New Zealand&quot;</value>
+                  <value>&quot;Nicaragua&quot;</value>
+                  <value>&quot;Niger&quot;</value>
+                  <value>&quot;Nigeria&quot;</value>
+                  <value>&quot;Oman&quot;</value>
+                  <value>&quot;Pakistan&quot;</value>
+                  <value>&quot;Panama&quot;</value>
+                  <value>&quot;Papua New Guinea&quot;</value>
+                  <value>&quot;Paraguay&quot;</value>
+                  <value>&quot;Peru&quot;</value>
+                  <value>&quot;Philippines&quot;</value>
+                  <value>&quot;Qatar&quot;</value>
+                  <value>&quot;Republic of the Congo&quot;</value>
+                  <value>&quot;Rwanda&quot;</value>
+                  <value>&quot;Saudi Arabia&quot;</value>
+                  <value>&quot;Senegal&quot;</value>
+                  <value>&quot;Sierra Leone&quot;</value>
+                  <value>&quot;Singapore&quot;</value>
+                  <value>&quot;Somalia&quot;</value>
+                  <value>&quot;South Africa&quot;</value>
+                  <value>&quot;South Sudan&quot;</value>
+                  <value>&quot;Sri Lanka&quot;</value>
+                  <value>&quot;Sudan&quot;</value>
+                  <value>&quot;Suriname&quot;</value>
+                  <value>&quot;Swaziland&quot;</value>
+                  <value>&quot;Syria&quot;</value>
+                  <value>&quot;Tanzania&quot;</value>
+                  <value>&quot;Thailand&quot;</value>
+                  <value>&quot;The Gambia&quot;</value>
+                  <value>&quot;Togo&quot;</value>
+                  <value>&quot;Trinidad and Tobago&quot;</value>
+                  <value>&quot;Tunisia&quot;</value>
+                  <value>&quot;Uganda&quot;</value>
+                  <value>&quot;United Arab Emirates&quot;</value>
+                  <value>&quot;Uruguay&quot;</value>
+                  <value>&quot;Venezuela&quot;</value>
+                  <value>&quot;Vietnam&quot;</value>
+                  <value>&quot;Western Sahara&quot;</value>
+                  <value>&quot;Yemen&quot;</value>
+                  <value>&quot;Zambia&quot;</value>
+                  <value>&quot;Zimbabwe&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[none:Category:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <lod column='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[none:Country:nk]' />
+              <color column='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[Country (group)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[Latitude (generated)]</rows>
+        <cols>[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{0F28A3DA-43A6-47FC-932A-C6BA472DAFF0}' />
+    </worksheet>
+    <worksheet name='map (3)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Orders+ (Multiple Connections)' name='federated.0q0b5pj0uetv7910cgxrg1lvlchx' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0q0b5pj0uetv7910cgxrg1lvlchx'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='real' name='[Profit]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Sales]' role='measure' type='quantitative' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Profit]' derivation='Sum' name='[sum:Profit:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Sales]' derivation='Sum' name='[sum:Sales:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[none:Category:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[Longitude (generated)]' field-type='quantitative' max='41994.998987872154' min='-12585733.016787851' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[Latitude (generated)]' field-type='quantitative' max='1380120.6006803806' min='-3779429.4779633228' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Profit:qk]' palette='green_gold_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Profit:qk]' />
+              <size column='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Sales:qk]' />
+              <lod column='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[none:Country:nk]' />
+              <lod column='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[none:State:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[Latitude (generated)]</rows>
+        <cols>[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{C3F311CB-2C06-44B1-858E-ED8C21A53D4F}' />
+    </worksheet>
+    <worksheet name='Белявская Александра 772303'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Orders+ (Multiple Connections)' name='federated.0q0b5pj0uetv7910cgxrg1lvlchx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0q0b5pj0uetv7910cgxrg1lvlchx'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='real' name='[Profit]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Shipping Cost]' role='measure' type='quantitative' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Profit]' derivation='Sum' name='[sum:Profit:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Shipping Cost]' derivation='Sum' name='[sum:Shipping Cost:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Shipping Cost:qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Shipping Cost:qk]</column>
+            <column>[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[none:Category:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Shipping Cost:qk]' value='62' />
+            <encoding attr='space' class='0' field='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Shipping Cost:qk]' field-type='quantitative' max='215227.05103866069' min='-7298.8482567938636' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Profit:qk]' field-type='quantitative' max='1380243.3248918438' min='-134768.70107434361' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[none:Category:nk]' />
+              <lod column='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[none:Country:nk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='719' />
+                <format attr='maxwidth' value='719' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='380' />
+                <format attr='maxheight' value='380' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Profit:qk]</rows>
+        <cols>[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Shipping Cost:qk]</cols>
+      </table>
+      <simple-id uuid='{31B64438-E5E0-4175-8FA6-53021710EA67}' />
+    </worksheet>
+    <worksheet name='Таблица гр (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Orders+ (Multiple Connections)' name='federated.0q0b5pj0uetv7910cgxrg1lvlchx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0q0b5pj0uetv7910cgxrg1lvlchx'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Sales]' derivation='Avg' name='[avg:Sales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Order Date]' derivation='Month' name='[mn:Order Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Sales]' derivation='Avg' name='[pcdf:avg:Sales:qk]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Relative' level-address='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[mn:Order Date:ok]' ordering-field='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[Order Date]' ordering-type='Field' type='PctDiff'>
+                <address>
+                  <value>-1</value>
+                </address>
+              </table-calc>
+            </column-instance>
+            <column-instance column='[Sales]' derivation='Sum' name='[pcdf:sum:Sales:qk]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Relative' level-address='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[mn:Order Date:ok]' ordering-field='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[Order Date]' ordering-type='Field' type='PctDiff'>
+                <address>
+                  <value>-1</value>
+                </address>
+              </table-calc>
+            </column-instance>
+            <column-instance column='[Sales]' derivation='Sum' name='[sum:Sales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Order Date]' derivation='Year' name='[yr:Order Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[pcdf:sum:Sales:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Sales:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[pcdf:avg:Sales:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[avg:Sales:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[mn:Order Date:ok]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[mn:Order Date:ok]' />
+              <groupfilter function='member' level='[mn:Order Date:ok]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[none:Category:nk]' kind='hide'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Category:nk]' />
+              <groupfilter function='member' level='[none:Category:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[:Measure Names]</column>
+            <column>[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[mn:Order Date:ok]</column>
+            <column>[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[none:Category:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Sales:qk]' value='#55aa7f' />
+            <format attr='background-color' field='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[avg:Sales:qk]' value='#55aa7f' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[:Measure Names]' value='true' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Sales:qk]' palette='green_10_0' type='interpolated' />
+            <encoding attr='color' field='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[avg:Sales:qk]' palette='green_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Sales:qk]' />
+              <text column='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0q0b5pj0uetv7910cgxrg1lvlchx].[mn:Order Date:ok] / [federated.0q0b5pj0uetv7910cgxrg1lvlchx].[none:Category:nk])</rows>
+        <cols>([federated.0q0b5pj0uetv7910cgxrg1lvlchx].[yr:Order Date:ok] / [federated.0q0b5pj0uetv7910cgxrg1lvlchx].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{9204EB11-428A-489F-868A-AD217527C428}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='Orders+ (Multiple Connections)' name='federated.0q0b5pj0uetv7910cgxrg1lvlchx' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0q0b5pj0uetv7910cgxrg1lvlchx'>
+        <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+        <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='7' param='horz' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='5' type='layout-basic' w='82400' x='800' y='1000'>
+              <zone h='49000' id='3' name='map (3)' w='82400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='11' name='(2) Измен продаж по годам с дифф' w='82400' x='800' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98000' id='6' is-fixed='true' param='vert' type='layout-flow' w='16000' x='83200' y='1000'>
+              <zone h='18875' id='8' mode='radiolist' name='map (3)' param='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[none:Category:nk]' type='filter' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='22125' id='9' name='map (3)' pane-specification-id='0' param='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Sales:qk]' type='size' w='16000' x='83200' y='19875'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='9125' id='10' name='map (3)' pane-specification-id='0' param='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Profit:qk]' type='color' w='16000' x='83200' y='42000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='14250' id='12' name='(2) Измен продаж по годам с дифф' pane-specification-id='1' param='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[yr:Order Date:ok]' type='color' w='16000' x='83200' y='51125'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='850' minheight='850' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='14' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='13' param='vert' type='layout-flow' w='98400' x='800' y='1000'>
+                <zone h='18875' id='8' mode='dropdown' name='map (3)' param='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[none:Category:nk]' type='filter' w='16000' x='83200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='3' is-fixed='true' name='map (3)' w='82400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='22125' id='9' name='map (3)' pane-specification-id='0' param='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Sales:qk]' type='size' w='16000' x='83200' y='19875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9125' id='10' name='map (3)' pane-specification-id='0' param='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Profit:qk]' type='color' w='16000' x='83200' y='42000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='11' is-fixed='true' name='(2) Измен продаж по годам с дифф' w='82400' x='800' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='14250' id='12' name='(2) Измен продаж по годам с дифф' pane-specification-id='1' param='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[yr:Order Date:ok]' type='color' w='16000' x='83200' y='51125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{6FFA1CE6-8761-4638-A48F-CC4670B31379}' />
+    </dashboard>
+    <dashboard name='Story 1' type='storyboard'>
+      <style>
+        <style-rule element='story-point-caption'>
+          <format attr='width' value='233' />
+        </style-rule>
+      </style>
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98340' id='1' param='vert' removable='false' type='layout-flow' w='98426' x='787' y='830'>
+            <zone h='4357' id='3' type='title' w='98426' x='787' y='830' />
+            <zone h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' type='flipboard-nav' w='98426' x='787' y='5187' />
+            <zone h='83506' id='5' paired-zone-id='4' removable='false' type='flipboard' w='98426' x='787' y='15664'>
+              <flipboard active-id='2' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point caption='Распределение продаж по странам' captured-sheet='map' id='1' />
+                  <story-point caption='Сао-Пауло наиболее перспективный штат Бразилии' captured-sheet='Dashboard 1' id='2' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{A3109819-6653-470A-B1AC-BF432EAE78E0}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Белявская Александра 772303'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[none:Category:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0A08E535-6760-4AED-997E-F0288385B6DF}' />
+    </window>
+    <window class='worksheet' name='(2) Измен продаж по годам с дифф'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[yr:Order Date:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A6F2C245-FB85-450C-8F43-A3E7D4D45883}' />
+    </window>
+    <window class='worksheet' name='Таблица гр (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='154'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Sales:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{6BB623DA-D348-4106-909C-97E7DB2174FF}' />
+    </window>
+    <window class='worksheet' name='map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Sales:qk]' type='size' />
+            <card pane-specification-id='0' param='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Profit:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{58009E7E-86BE-4170-B623-558E3F535E0F}' />
+    </window>
+    <window class='worksheet' name='map (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[Country (group)]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='8' />
+      </viewpoint>
+      <simple-id uuid='{4E85C0A4-9FF3-47F0-AEE2-6A473E690B6B}' />
+    </window>
+    <window class='worksheet' name='map (3)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='radiolist' param='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[none:Category:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Sales:qk]' type='size' />
+            <card pane-specification-id='0' param='[federated.0q0b5pj0uetv7910cgxrg1lvlchx].[sum:Profit:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B7F239F3-6385-44B4-AAED-D85D779BB392}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='(2) Измен продаж по годам с дифф'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='map (3)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='8' />
+      <simple-id uuid='{D79C502D-D54E-4480-88F3-416826778DC3}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Story 1'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{D624CDF5-8DB5-42C9-9D49-FF8F5363DB90}' />
+    </window>
+  </windows>
+</workbook>
