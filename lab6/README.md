@@ -1,3 +1,5 @@
+[Отчёт](https://drive.google.com/open?id=1YA9e81mqe-IUzEW31Ey8H31j9B2knDTM)
+
 [Видео](https://drive.google.com/open?id=14WZKv1TspgtuJ3P_vkU75YZdNgDAGilo)
 
 Что такое срезы в python/numpy/pandas?

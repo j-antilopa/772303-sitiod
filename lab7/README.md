@@ -1,3 +1,5 @@
+[Отчёт](https://drive.google.com/open?id=1RyjX9ASrvd7uy6J2M_uAN0LxtEEzb2I1)
+
 [Видео](https://drive.google.com/open?id=1TNlNqtgOxg0LlItcYvuwf-Vh8tqfEL9q)
 
 Что такое линейная регрессия?

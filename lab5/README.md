@@ -1,3 +1,5 @@
+[Отчёт](https://drive.google.com/open?id=147SWsQWDUNVfQirQrPX2ItSLbFt-2dK6)
+
 [Видео](https://drive.google.com/open?id=1wdpQMAjiuzN0fMcEfOKR8WvZbRw97gbv)
 
 За что отвечает функция prod, которую вы использовали?
