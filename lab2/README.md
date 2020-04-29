@@ -2,6 +2,8 @@
 
 [Отчёт](https://drive.google.com/open?id=1o3S_pbfFLq-vmBuPzGEcCIScPrr_S5W0)
 
+[Видео](https://drive.google.com/file/d/1iO2EHXC6ol40z53tLKb4_0JD3hzFrkYt)
+
 Зачем нужна программа tableau?
 > _Для конвертации табличных данных в визуальные, а именно создания интерактивных инфографиков и бизнес-аналитики._
 
