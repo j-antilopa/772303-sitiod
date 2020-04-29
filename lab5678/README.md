@@ -12,13 +12,11 @@
 [1]: https://docs.docker.com/install/linux/docker-ce/
 [2]: https://docs.docker.com/compose/install/
 
-### Video
-
-[Google Drive](https://drive.google.com/open?id=1r2gnmqBSGJvwFQGI8LmUwCFF76Nyw4qX)
-
 ### Lab 5
 
 [Отчёт](https://drive.google.com/open?id=10QIBfKIZxDNHtw19GYbmruI1KBKQR-T5)
+
+[Видео](https://drive.google.com/file/d/1r2gnmqBSGJvwFQGI8LmUwCFF76Nyw4qX)
 
 Что такое дисперсия?
 > _Дисперсия - это степень отколнения значений переменной от среднего значения. 
@@ -33,6 +31,8 @@
 
 [Отчёт](https://drive.google.com/open?id=1I3tKWcJe353XKVMLiMejY5j9CWqfIUQ2)
 
+[Видео](https://drive.google.com/file/d/1r2gnmqBSGJvwFQGI8LmUwCFF76Nyw4qX?t=2m32s)
+
 Зачем нужна визуализация данных?
 > _Для удобного восприятия информации._
 
@@ -43,6 +43,8 @@
 ### Lab 7
 
 [Отчёт](https://drive.google.com/open?id=1CKZrU1wZlDLY7v3iYt9-ZxMoHWq4Tpbf)
+
+[Видео](https://drive.google.com/file/d/1r2gnmqBSGJvwFQGI8LmUwCFF76Nyw4qX?t=8m07s)
 
 Что такое линейная регрессия?
 > _Линейная регрессия - это модель зависимости переменной x от одной или нескольких других переменных 
@@ -61,6 +63,8 @@
 ### Lab 8
 
 [Отчёт](https://drive.google.com/open?id=1J5C1znZWrp6YOAx5hHntVFU5WjxPzXGF)
+
+[Видео](https://drive.google.com/file/d/1r2gnmqBSGJvwFQGI8LmUwCFF76Nyw4qX?t=11m33s)
 
 Что такое документно-ориентированная БД? 
 > _Документно-ориентированная БД – это тип нереляционных баз данных, предназначенный для хранения и запроса данных 
