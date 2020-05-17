@@ -1,4 +1,6 @@
-## Вопросы к лабораторной №2
+## Лабораторная работа №2
+
+[Видеоотчёт](https://drive.google.com/open?id=1yY46HVncr2aekk7b7lkwlpw43IIJV2i3)
 
 ### Для чего Tableau?
 
