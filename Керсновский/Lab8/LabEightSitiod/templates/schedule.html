@@ -1,0 +1,127 @@
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <link href="../static/bulma.css" rel="stylesheet">
+    <link href="../static/style.css" rel="stylesheet">
+    <title>Bus schedule</title>
+</head>
+
+<section class="section">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="schedule?data=bus_schedule&file_type=csv">
+                    Автобусы + CSV
+                </a>
+
+                <a class="navbar-item" href="schedule?data=bus_schedule&file_type=xml">
+                    Атобусы + XML
+                </a>
+
+                <a class="navbar-item" href="schedule?data=train_schedule&file_type=csv">
+                    Поезда + CSV
+                </a>
+
+                <a class="navbar-item" href="schedule?data=train_schedule&file_type=xml">
+                    Поезда + XML
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="container columns">
+        <table class="table column is-offset-1 is-10">
+            <thead>
+            <tr>
+                <th>Номер</th>
+                <th>Время отправки</th>
+                <th>Время прибытия</th>
+                <th>Станция отправления</th>
+                <th>Станция прибытия</th>
+                <th>Цена билета</th>
+                <th>Платформа</th>
+                {% if request.args.get("data") == "bus_schedule" %}
+                <th>Марка автобуса</th>
+                {% endif %}
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <th>Номер</th>
+                <th>Время отправки</th>
+                <th>Время прибытия</th>
+                <th>Станция отправления</th>
+                <th>Станция прибытия</th>
+                <th>Цена билета</th>
+                <th>Платформа</th>
+                <th>Марка автобуса</th>
+            </tr>
+            <tbody>
+            {% for bus in data %}
+                <tr>
+                    {% for str in bus %}
+                        <th>{{ str }}</th>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+            </tfoot>
+        </table>
+    </div>
+    <form action="/schedule" class="columns is-multiline">
+        <input type="hidden" value="{{ request.args.get("file_type") }}" name="file_type"/>
+        <input type="hidden" value="{{ request.args.get("data") }}" name="data"/>
+        <div class="column is-2">
+            <label class="label">Станция отправления</label>
+            <div class="select">
+                <select name="station_start">
+                    <option value="">Все</option>
+                    {% for bus in all_data %}
+                        {% if bus.station_start == request.args.get("station_start") %}
+                            <option value={{ bus.station_start }} selected>{{ bus.station_start }}</option>
+                        {% else %}
+                            <option value={{ bus.station_start }}>{{ bus.station_start }}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="column is-2">
+            <label class="label">Станция прибытия</label>
+            <div class="select">
+                <select name="station_end">
+                    <option value="">Все</option>
+                    {% for bus in all_data %}
+                        {% if bus.station_end == request.args.get("station_end") %}
+                            <option value={{ bus.station_end }} selected>{{ bus.station_end }}</option>
+                        {% else %}
+                            <option value={{ bus.station_end }}>{{ bus.station_end }}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="column is-2">
+            <label class="label">Время отправления</label>
+            <input value="{{ request.args.get("time_start") }}" class="date-time-picker" id="datetime" name="time_start"
+                   type="datetime-local">
+        </div>
+        <div class="column is-2">
+            <label class="label">Время прибытия</label>
+            <input value="{{ request.args.get("time_end") }}" class="date-time-picker" id="datetime" name="time_end"
+                   type="datetime-local">
+        </div>
+        <div class="column is-2">
+            <label class="label">Выходные/Будние</label>
+            <div class="select">
+                <select name="type_day">
+                    <option value="0">Выходные</option>
+                    <option value="1">Будние</option>
+                </select>
+            </div>
+        </div>
+        <div class="control column is-2">
+            <button type="submit" class="submit-button button is-primary">Применить</button>
+        </div>
+    </form>
+    <button class="button is-primary">Ближайшие рейсы</button>
+</section>

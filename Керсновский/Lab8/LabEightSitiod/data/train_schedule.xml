@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<breakfast_menu>
+    <bus>
+        <number>1</number>
+        <time_start>2020-09-12 13:33:00</time_start>
+        <time_end>2020-09-12 22:40:00</time_end>
+        <station_start>Центральный</station_start>
+        <station_end>Первомайский</station_end>
+        <ticket_price>4.0</ticket_price>
+        <platform>11</platform>
+        <type>Региональный</type>
+    </bus>
+    <bus>
+        <number>2</number>
+        <time_start>2020-09-12 14:33:00</time_start>
+        <time_end>2020-09-12 16:30:00</time_end>
+        <station_start>Центральный</station_start>
+        <station_end>Первомайский</station_end>
+        <ticket_price>4.0</ticket_price>
+        <platform>8</platform>
+        <type>Междугородний</type>
+    </bus>
+</breakfast_menu>

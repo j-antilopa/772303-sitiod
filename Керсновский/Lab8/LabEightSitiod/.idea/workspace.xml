@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a7c99ca0-962e-4a1b-b7cf-ea989824f5e2" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Flask Main" />
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Xa53pUklNau7iYLdCr6M0LMPqX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="F:/labfivesaipis" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\LocalConsp\PycharmProjects\labOneFlask\data" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\LocalConsp\PycharmProjects\labOneFlask\data" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="labOneFlask" type="Python.FlaskServer">
+      <module name="labOneFlask" />
+      <option name="target" value="$PROJECT_DIR$/app.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a7c99ca0-962e-4a1b-b7cf-ea989824f5e2" name="Default Changelist" comment="" />
+      <created>1581271168159</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581271168159</updated>
+      <workItem from="1581271190752" duration="11449000" />
+      <workItem from="1581353191054" duration="3956000" />
+      <workItem from="1581375256341" duration="1851000" />
+      <workItem from="1581543445887" duration="8508000" />
+      <workItem from="1581616525323" duration="5736000" />
+      <workItem from="1581638576497" duration="3017000" />
+      <workItem from="1581712513372" duration="7314000" />
+      <workItem from="1581893355220" duration="4159000" />
+      <workItem from="1582038090577" duration="596000" />
+      <workItem from="1582219020963" duration="2007000" />
+      <workItem from="1582241271778" duration="1210000" />
+      <workItem from="1582355133686" duration="5130000" />
+      <workItem from="1582459401336" duration="4917000" />
+      <workItem from="1582664787409" duration="633000" />
+      <workItem from="1582674071781" duration="6816000" />
+      <workItem from="1582739255609" duration="1400000" />
+      <workItem from="1584030731374" duration="197000" />
+      <workItem from="1584286640186" duration="3682000" />
+      <workItem from="1589542003327" duration="177000" />
+      <workItem from="1589540101576" duration="916000" />
+      <workItem from="1589566812449" duration="124000" />
+      <workItem from="1589795474914" duration="1101000" />
+      <workItem from="1589833346756" duration="3248000" />
+      <workItem from="1589840774359" duration="543000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="72" key="#Inspections" timestamp="1582679048247">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="72" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1582679048247" />
+    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589542020295">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1589542020295" />
+    <state x="508" y="216" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582459479503">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="508" y="216" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1582459479503" />
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582460013301">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1582460013301" />
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1589807785543">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589807785543" />
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1589841316941">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589841316941" />
+    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1589841316941">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589841316941" />
+    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1589841316941">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589841316941" />
+    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1589841316941">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589841316941" />
+    <state x="277" y="56" key="SettingsEditor" timestamp="1581544269591">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1581544269591" />
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1589840774204">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589840774204" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1581549617334">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1581549617334" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/LabEightSitiod$labOneFlask.coverage" NAME="labOneFlask Coverage Results" MODIFIED="1589840988841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/labOneFlask$labOneFlask.coverage" NAME="labOneFlask Coverage Results" MODIFIED="1589540589484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
